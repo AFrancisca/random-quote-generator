@@ -6,6 +6,10 @@ const container = document.getElementById('container');
 button.addEventListener('click', randomQuote = () => {
   button.disabled = true; // Disable the button
   container.classList.add('loading'); // Add loading class to the container
+  
+  // Clear the current quote and author
+  quotes.textContent = "";
+  authors.textContent = "";
 
   const url = "https://api.quotable.io/random";
   fetch(url)
